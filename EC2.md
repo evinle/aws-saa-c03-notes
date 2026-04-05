@@ -95,3 +95,15 @@ aws ec2 describe-security-groups --filters 'Name=group-name,Values=patientping-p
 # Add the inbound rule
 aws ec2 authorize-security-group-ingress --group-id SG-ID --ip-permissions IpProtocol=tcp,FromPort=8080,ToPort=8080,IpRanges=[{CidrIp=0.0.0.0/0,Description="Allow web traffic for PatientPing site"}]
 ```
+
+# Running Instance with custom Launch Template and AMI
+``` bash
+# Terminate the old instance
+aws ec2 terminate-instances --instance-ids OLD-INSTANCE-ID
+
+# Launch from template
+aws ec2 run-instances --launch-template LaunchTemplateName=patientping-web-launcher --tag-specifications 'ResourceType=instance,Tags=[{Key=Name,Value=patientping-web-v2}]'
+
+# Re-associate the Elastic IP
+aws ec2 associate-address --instance-id NEW-INSTANCE-ID --allocation-id EIP-ALLOCATION-ID
+```
