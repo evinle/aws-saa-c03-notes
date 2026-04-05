@@ -55,3 +55,43 @@ aws ec2 authorize-security-group-ingress --group-id SG-ID --ip-permissions IpPro
 aws ec2 modify-instance-attribute --instance-id INSTANCE-ID --groups SG-ID
 ```
 
+# Overview
+Here's a review of the networking flow for us to SSH into our server:
+
+1. Our computer communicates with the server's public **Elastic IP** address.
+2. The server is in a **public subnet** with a **route** to the **internet gateway**.
+3. The **security group** allows **inbound** traffic on `22/tcp` from _our_ public IP address.
+4. Our **SSH private key** matches the **public key** we uploaded to AWS.
+
+## SSH 
+``` bash
+nc -zv YOUR.INSTANCE.IP.ADDR 22
+# Connection to YOUR.INSTANCE.IP.ADDR port 22 [tcp/ssh] succeeded!
+```
+
+in `~/.ssh/config`
+``` bash
+Host patientping
+    HostName IP_ADDR
+    User ec2-user
+    IdentityFile /PATH/TO/PRIVATE_KEY
+```
+
+- Modify Message of the Day
+	- `echo 'Welcome, PatientPing Server Admin!' | sudo tee /etc/motd > /dev/null`
+	- `tee` takes stdin and write to stdout and another source
+	- Another common use — writing to privileged files with sudo:
+	- ```bash 
+		echo "127.0.0.1 example.com" | sudo tee -a /etc/hosts
+		```
+	- You can't do sudo echo "..." >> /etc/hosts because the redirect happens as your user, not root — tee solves that.
+
+
+# Allow Public Web traffic
+``` bash
+# Get the security group ID
+aws ec2 describe-security-groups --filters 'Name=group-name,Values=patientping-public' --query 'SecurityGroups[0].GroupId' --output text
+
+# Add the inbound rule
+aws ec2 authorize-security-group-ingress --group-id SG-ID --ip-permissions IpProtocol=tcp,FromPort=8080,ToPort=8080,IpRanges=[{CidrIp=0.0.0.0/0,Description="Allow web traffic for PatientPing site"}]
+```
