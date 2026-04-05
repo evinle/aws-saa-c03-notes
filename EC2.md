@@ -54,3 +54,4 @@ aws ec2 authorize-security-group-ingress --group-id SG-ID --ip-permissions IpPro
 # Attach to an instance
 aws ec2 modify-instance-attribute --instance-id INSTANCE-ID --groups SG-ID
 ```
+
