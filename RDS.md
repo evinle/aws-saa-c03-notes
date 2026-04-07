@@ -55,5 +55,3 @@ aws ec2 authorize-security-group-ingress --group-id RDS-SG-ID --ip-permissions I
 ```bash
 aws rds create-db-instance-read-replica --db-instance-identifier patientping-replica --source-db-instance-identifier patientping-db --db-instance-class db.t3.micro --vpc-security-group-ids YOUR-SG-ID --db-subnet-group-name patientping-private-subnet-group --no-publicly-accessible
 ``` 
-
-#
