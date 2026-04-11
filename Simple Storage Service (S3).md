@@ -68,7 +68,21 @@ arn:partition:service:region:account-id:resource-type:resource-id
 
 ### Accessing files
 - Need to open with credentials attached using the open button at the top 
+- else 
+- ``` xml
+<Error>
 
+<Code>AccessDenied</Code>
+
+<Message>Access Denied</Message>
+
+<RequestId>YY54QMSAWY2NA1QX</RequestId>
+
+<HostId>NHenTA2j9rv7o72h0GtaW2NApkwfJp7HCwFgImlFGGJsbchguYHtJQv2rYGOfBrvG3nBvyZg7bk=</HostId>
+
+</Error>
+  ```
+![[Pasted image 20260411164513.png]]
 ### Deleting a Bucket
 - 2 Step
 	- Empty the bucket
