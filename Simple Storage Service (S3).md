@@ -34,7 +34,7 @@
 	- Often referred to as prefixes
 ![[Pasted image 20260411153252.png]]
 - Bucket names restrictions
-	- 3 - 63 characters, all lower case, no underscores
+	- 3 - 63 characters, all lower case, no underscores, only - and .
 	- Must start with a lowercase letter or a number
 	- Can't be IP formatted e.g. 1.1.1.1
 - 100 soft limit, 1000 hard limit per account
@@ -50,3 +50,26 @@
 - Great for scale, distribution/upload
 - Great for 'offloading' data
 - INPUT and OUTPUT to many AWS products
+
+## Creating an S3 Bucket
+- A bucket is assigned to a region
+- By default blocks ALL public access, only admins can access
+	- If you untick the "Block all public access", it just means that public access is able to be provisioned to it, doesn't mean it's instantly available to the public
+
+### Titbit on ARN
+Structure
+``` 
+arn:partition:service:region:account-id:resource-id
+arn:partition:service:region:account-id:resource-type/resource-id
+arn:partition:service:region:account-id:resource-type:resource-id
+```
+- S3 bucket name is globally unique, so we don't need the region or account id
+	- arn:aws:s3:::khoalacampaign
+
+### Accessing files
+- Need to open with credentials attached using the open button at the top 
+
+### Deleting a Bucket
+- 2 Step
+	- Empty the bucket
+	- Delete the bucket
