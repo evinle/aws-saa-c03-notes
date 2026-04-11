@@ -33,5 +33,6 @@
 		- Pricing
 		- Dense internet access point
 		- Default copy paste region
-		
+
+Check if the profile is setup successfull
 `aws s3 ls --profile iamadmin-general`
