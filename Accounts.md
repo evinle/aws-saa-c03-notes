@@ -27,3 +27,4 @@
 		- Network location
 - Encodes the secret + account id (like JWT?)
 ![[Pasted image 20260411103233.png]]
+
