@@ -1,0 +1,6 @@
+- Aims to ensure
+	- An agreed level of operational performance - usually uptime
+	- For a higher than normal period
+	- Not about user experience
+	- About maximizing a system's online time
+	- Even if the user needs 
