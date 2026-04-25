@@ -25,3 +25,8 @@
 - ![[Pasted image 20260411185940.png]]
 - Automate Infrastructure
 	- Can also be used in change management
+
+## Demo
+- !Ref to reference another thing inside the template
+- !GetAttr to access nested field 
+- SessionManager setup to access EC2 instance through web shell session manager
