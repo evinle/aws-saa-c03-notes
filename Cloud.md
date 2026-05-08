@@ -1,2 +1,3 @@
-- Catch up with possato
+- Catch up with Possato
+- Raise in engineering catch up about what I want to do 
 - 
