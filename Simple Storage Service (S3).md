@@ -29,7 +29,7 @@
 - Blast radius is the region (if a major outtage or data corruption event occurs)
 - Bucket name must be GLOBALLY UNIQUE - across all of aws
 - Very flat structure 
-- Folders are respresented loosely based on the key (/old/Koala1.jpg)
+- Folders are represented loosely based on the key (/old/Koala1.jpg)
 	- Such keys would be represented in the UI as a folder, but it's actually just a name with metadata built in
 	- Often referred to as prefixes
 ![[Pasted image 20260411153252.png]]
