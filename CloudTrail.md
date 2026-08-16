@@ -1,0 +1,13 @@
+- Logs things that happens in an AWS account
+	- Creating Bucket
+	- Stopping EC2 instance
+	- Add SG
+
+- Logged API Calls/Events are CloudTrail Events
+	- Management Events
+	- Data Events
+- Last 90 days storage
+	- No Cost
+	- Enabled by Default
+- To Customise, you need to create a Trail
+	- 
