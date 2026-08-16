@@ -39,3 +39,6 @@
 ## Pricing
 - 90 days retention - default, free
 - One copy of Management Events, in S3, in each region, for each account
+- Everything above that for Management Events, you'd have to pay
+- You have to pay by default for any other types of events
+- S3 only has costs associated, both with requests + storage
