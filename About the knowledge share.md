@@ -1,4 +1,0 @@
-- I can share about the Redis optimisation
-- I can also share about cloud infra
-- Need to reach out to Nam
-	- Need to look more into our redis first
