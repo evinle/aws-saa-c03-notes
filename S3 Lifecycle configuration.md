@@ -1,0 +1,10 @@
+- Transition or expire objects in a bucket
+- Set of rules you apply to a bucket
+- Applied based on a criteria
+- On a bucket or groups of objects - prefix or tags
+- Transition actions | Expiration Actions
+- ![[Pasted image 20260920014040.png]]
+- Only down, not up
+- Minimum size might cost you more
+- For a single rule, you can only transition between standard to IA after 30 days, and then only after another 30 days, can you move to glacier
+	- Can be done with 2 rules without the wait
