@@ -1,0 +1,11 @@
+- S3 with KMS means that every single object requires a DEK generated from KMS, not very scalable
+- ![[Pasted image 20260919152150.png]]
+
+- Bucket Key generated from KMS - time limited
+- Reduces number of KMS API calls
+- Not retroactive - only affect things uploaded after it's enabled
+- ![[Pasted image 20260919152429.png]]
+- Caveats
+	- CloudTrail KMS events now show the bucket, not the object arn
+	- Works with bucket replication - preserves encryption settings
+	- If replicating plaintext -> standard encryption bucket, objects are automatically encrypted on the way through
