@@ -56,4 +56,11 @@
 # S3 Intelligent-Tiering
 - 5 different tiers
 - Range of ways an object can be stored
-- 
+- Tiering system moves it between tiers automatically for you
+	- Monitors usage of an object
+	- Not accessed 30 days - moved to IA
+	- 90 days - Archive Instant Access
+	- 90-270 days - Archive
+	- 180 or 730 days - Deep Archive
+	- ![[Pasted image 20260919162023.png]]
+- Monitoring and automation cost per 1000 objects
