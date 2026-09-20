@@ -1,0 +1,8 @@
+- Notification when events occur in a bucket
+- Delivered to SNS, SQS and Lambdas
+	- Object Created
+	- Object Delete
+	- Object Restore (Glacier Deep Archive)
+	- Replication
+- ![[Pasted image 20260920143958.png]]
+- Limited, so lean EventBridge unless you have a good reason

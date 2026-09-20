@@ -1,0 +1,4 @@
+- Retrieve parts of objects
+- SQL-Like statements
+- ![[Pasted image 20260920143332.png]]
+- 
