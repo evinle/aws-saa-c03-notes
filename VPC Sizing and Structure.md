@@ -30,3 +30,5 @@
 		- /18 -> /22
 		- etc.
 		- every bit pushed up, you get 2^n subnets
+		- ![[Pasted image 20260920180457.png]]
+		- 
