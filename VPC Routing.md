@@ -25,4 +25,15 @@
 - ![[Pasted image 20260920224654.png]]
 
 # IPv4 Addressing in VPC
-- Public IP addressing is a 
+- Public IP addressing is fake in VPC, the public IPv4 address is actually assigned at the IGW level, not directly tied to the instance of something like EC2. 
+- The EC2 instance would only see the private IP address assigned from the private subnet
+- ![[Pasted image 20260920225210.png]]
+- Public address never touches the instance
+- IPv6 case does have the 
+
+# Bastion Host / Jumpbox
+- instance in a public subnet
+- Incoming management connections arrive there
+- Then access internal VPC resources
+- Management point/access point
+- Often the only way to IN to a VPC
