@@ -38,7 +38,7 @@ Policies attached to Identities
 - Humans, Apps, Service Accounts, etc.
 - Usually if you can picture 1 named thing, correct identity is an IAM User
 
-Principle
+Principal
 - Entity trying to access 
 - Needs to be authenticated and authorized to interact with a resource
 - Can authenticate through Username & Password OR Access keys
