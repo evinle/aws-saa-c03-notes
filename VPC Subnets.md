@@ -23,6 +23,6 @@
 	- MTP servers
 	- NetBIOS servers
 - Can create options set, but can't edit
-- Can configure 
-	- Whether resources are assigned public IPv4 on a subnet
-	- 
+- Can configure (at a subnet level)
+	- Whether resources are assigned public IPv4 
+	- Whether resources are assigned IPv6 
