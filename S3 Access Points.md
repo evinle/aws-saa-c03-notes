@@ -1,0 +1,7 @@
+- Simplify managing access to S3 Buckets/objects
+	- billions of objects, from a business, 
+- Many access points, each with different policies
+	- with different network access controls
+	- with different endpoint address
+- `aws s3control create-access-point --name ... --account-id ... --bucket ...`
+- ![[Pasted image 20260920150953.png]]

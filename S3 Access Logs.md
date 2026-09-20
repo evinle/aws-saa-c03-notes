@@ -1,0 +1,5 @@
+- Source Bucket + Target Bucket
+- S3 Log Delivery Group - Best Efforts process, can take a few hours
+- Enabled with ACL (what?)
+- ![[Pasted image 20260920145043.png]]
+- 
