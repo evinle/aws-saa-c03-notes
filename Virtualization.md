@@ -1,0 +1,31 @@
+- Running more then 1 OS on a piece of hardware
+- Part of kernel = privileged mode = special access to the hardware
+- Emulated Virt = Software Virt
+	- Host still running
+	- Hypervisor
+	- Guest OS wrapped in container - VM - unmodified OS
+	- Devices mapped
+	- Emulated hardware, from Hypervisor
+	- Binary Translation - intercepted - translated on the flight
+	- Really slow
+	- ![[Pasted image 20260929235515.png]]
+	- 
+- Para Virt
+	- Works on subsets of OS, that can be modified
+	- Areas that attempt privileged calls are modified
+	- Direct them to do Hypercalls to the Hypervisor
+	- ![[Pasted image 20260929235526.png]]
+- Hardware Virt = Hardware Assisted Virt
+	- Hardware is virtualization aware
+	- CPU knows virt exists
+	- CPU traps guest OS calls, forwards to Hypervisor, which determines how they're executed
+	- Network I/O, Disk I/O still impacted since multiple guest OS's share same physical network card
+	- ![[Pasted image 20260929235541.png]]
+
+- SR-IOV
+	- Complex standards
+	- Network card can present itself as mini cards
+	- Hardware level
+	- Enhanced networking in EC2, faster speeds, lower latency, even at high loads consistently
+	- ![[Pasted image 20260929235454.png]]
+	
