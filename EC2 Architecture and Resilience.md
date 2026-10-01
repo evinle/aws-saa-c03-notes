@@ -2,10 +2,33 @@
 - EC2 instances run on EC2 Hosts (servers)
 - Shared hosts or Dedicated hosts
 - Billed based on how long they run + what resources were allocated
-- Hosts within a single AZ
+- Hosts within a single AZ, AZ resilient
 
 - Local storage = instance store = temporary
 	- on a host, moving hosts means losing that storage
 - Storage networking
 - Data networking
+- When instance is allocated in a subnet
+	- primary ENI is provisioned in the subnet, mapped to the physical hardware
+	- instances can have multiple ENI, even in different subnets, as long as in same AZ
+- EBS - elastic block store
+	- Also in an AZ, can't access across zones
+	- Allocate volume, for instances in the same AZ
+- Restart instance - still stays on host, unless
+	- Host fails, taken off for maintenance
+	- Stopped, then started again
+	- Moved to different host on same AZ
+	- Migratable
+- ![[Pasted image 20261002073830.png]]
+- Instances of same type and generation will likely occupy the same host
+- Host
+	- Certain version, certain processor, certain year, etc.
+	- Type of instance also follows, having certain versions, sizes, etc.
 
+# What is EC2 good for?
+- Traditional OS + application compute
+- Long running compute
+- Something that needs a server
+- Bursty or steady traffic
+- Monoliths
+- Migrated apps or Disaster Recovery
