@@ -1,0 +1,14 @@
+- Block storage - Raw disk allocations (volume)
+	- Can be encrypted using KMS
+- Instances can see the block device, then create the file system on top (ext3|4/ntfs/xfs/etc.)
+- Storage is in ONE AZ (different from other AZ's EBS), isolated and resilient within that AZ
+- Attach to 1 EC2 instance over a storage network, generally
+	- Some storage types can use Multi attach
+		- Used for cluster, cluster needs to manage
+- Freely detached and reattach to other instances
+	- Persistent until you remove the volume
+- Can backup with snapshots into s3
+	- Can create volume from snapshot (migrating across AZs)
+- Different physical storage types, sizes, performance profiles
+- Billed by GB/month
+- ![[Pasted image 20261002084640.png]]
