@@ -1,0 +1,19 @@
+# Provisioned IOPS SSD (io1/2)
+- IOPS configurable independent of the size of volume
+- Consistent low latency & jitter
+- High performance use cases
+- Up to 64000 IOPS (4x GP2/3)
+- Up to 256000 IOPS (Block Express')
+- Up to 1000 MBs throughput
+- Up to 4000 MBs throughput (Block Express)
+- 4GB - 16TB io 1/2
+- 4GB - 64TB BlockExpress
+- Up to 50 IOPS/GB
+- Up to 500 IOPS/GB
+- Up to BlockExpress 1000IOPS/GB
+- EC2 Per instance performance limit exists  (would require multiple volumes)
+	- io1 - 260000 IOPS & 7500 MB/s
+	- io2 - 160000 IOPS & 4750 MB/s
+	- io2 Block Express - 260000 IOPS & 7500MB/s
+	- gp2/3 - 260000 IOPS & 7000 MB/s
+- ![[Pasted image 20261003201930.png]]
