@@ -16,4 +16,4 @@
 	- io2 - 160000 IOPS & 4750 MB/s
 	- io2 Block Express - 260000 IOPS & 7500MB/s
 	- gp2/3 - 260000 IOPS & 7000 MB/s
-- ![[Pasted image 20261003201930.png]]
+- ![[Pasted image 20261003202023.png]]
