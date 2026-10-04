@@ -1,0 +1,2 @@
+- Highly available cluster of compute resources
+- ![[Pasted image 20261004221814.png]]

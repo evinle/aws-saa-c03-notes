@@ -16,6 +16,8 @@
 	- They're injected into YOUR VPC by getting assigned an ENI
 	- So you could make them private/public/assign IPs/SGs
 - You only pay for the containers that you're using
+- No worries about capacity or availability
+- ![[Pasted image 20261004220559.png]]
 
 # EC2 vs ECS (EC2) vs Fargate
 - If you use containers ... ECS

@@ -1,0 +1,15 @@
+- Managed Container image registry service
+- Like Docker Hub but for AWS
+- Each AWS account has a public and private registry
+	- Inside each registry, you have many repositories
+		- Each repository can contain many images
+			- Images can have several tags
+- Public = public Read Only, Read Write requires permissions
+- Private = permissions required for any Read Only & Read Write
+
+- Integrated with IAM - Permissions
+- Image scanning, basic / enhanced (inspector)
+- Near real-time Metrics => CloudWatch (auth, push, pull)
+- API actions => CloudTrail
+- Events => EventBridge
+- Replication ... Cross Region and Cross Account
