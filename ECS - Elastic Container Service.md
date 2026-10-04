@@ -1,0 +1,24 @@
+- 2 Modes: EC2 and Fargate
+ - ECS Clusters = where your containers run
+ - ECR = image registry from AWS
+ - Container Definition
+	 - Where your container image is
+	 - Which port container uses
+ - Task = self contained application
+	 - Could have 1 or many containers
+- Container is just enough info, pointing to where the container is and what port it uses
+	- The rest is in the task definition	
+- Task Definition includes
+	- Resources used by the task
+	- Networking mode
+	- Compatibility 
+	- Task Role
+- Service Definition 
+	- How we want a task to scale, how many copies to run
+	- Load balancer
+![[Pasted image 20261004213135.png]]
+# Key Concepts
+- Container Definition - Image & Ports
+- Task Definition - Security (task role), container(s), resources
+- Task Role - IAM role the task assumes
+- Service - How many copies, HA, restarts

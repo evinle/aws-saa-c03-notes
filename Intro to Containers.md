@@ -25,4 +25,4 @@
 - Container only runs the application & environment it needs
 - As much isolation as VMs
 - Ports are exposed to host 
-- Application stacks can have multiple containers
+- Application stacks 
