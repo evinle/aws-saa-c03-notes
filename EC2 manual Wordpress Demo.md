@@ -1,0 +1,21 @@
+# WordPress on Amazon Linux - Quick Notes
+ 
+- **Stack:** Amazon Linux is RPM-family (Red Hat/Fedora lineage), so it uses `dnf` (AL2 used `yum`), not `apt`. Package names differ: `httpd` not `apache2`, `php-mysqlnd` not `php-mysql`.
+- **`dnf install -y`:** `-y` auto-confirms, needed for unattended scripts.
+- **`wget`:** just a downloader, nothing distro-specific. `curl -O` does the same. `-P <dir>` saves into a directory.
+- **systemd:** PID 1, starts and supervises all services. `systemctl` is its control tool.
+- **`systemctl start`:** runs the service now, this boot only.
+- **`systemctl enable`:** starts it at boot, but doesn't start it now (`enable --now` does both).
+- **Why the symlink:** the unit's `[Install]` has `WantedBy=multi-user.target`, so `enable` links it into `/etc/systemd/system/multi-user.target.wants/`. systemd starts everything in that folder at boot. `disable` removes the link.
+- **Beyond a daemon:** systemd also tracks the process, collects logs (`journalctl -u httpd`), restarts on failure and orders dependencies. Check state with `systemctl status` / `is-enabled` / `is-active`.
+- **MariaDB vs MySQL:** MariaDB is a fork of MySQL, not a wrapper. It keeps the same protocol, SQL, config format, port 3306 and `/var/lib/mysql`, so it's a drop-in replacement.
+- **Why `mysql` works:** `mysql`, `mysqladmin` and `mysqldump` are legacy-name aliases for `mariadb`, `mariadb-admin` and `mariadb-dump`. Check with `ls -l $(which mysql)`.
+- **`mysqladmin -u root password X`:** sets the DB root password. `password` is a subcommand, and DB root is separate from Linux root.
+- **Web root:** `/var/www/html` is Apache's DocumentRoot. The tarball extracts into `wordpress/`, so `cp -rvf wordpress/* .` moves it up to the root.
+- **`tar -zxvf`:** gunzip, extract, verbose, filename follows.
+- **`wp-config.php`:** WordPress's DB credentials file, copied from `wp-config-sample.php` and filled in with `sed -i`. Double quotes in the `sed` expression let `$DBName` expand.
+- **`chown apache:apache`:** Apache runs as the `apache` user here (`www-data` on Debian/Ubuntu), so it needs ownership to write uploads and plugins.
+- **DB setup:** the script builds a `.sql` file with `echo >>` and feeds it in with `mysql < file`. The statements are `CREATE DATABASE`, `CREATE USER ... @'localhost'`, `GRANT ALL ON db.*` and `FLUSH PRIVILEGES`.
+- **Key config paths:** `/etc/httpd/conf/httpd.conf`, `/etc/my.cnf.d/`, `/etc/php.ini`, `/var/log/httpd/error_log`.
+- **Lab-only habits:** hardcoded passwords, root and app passwords identical, and a plaintext temp file. Avoid all of these in production.
+- **Step 8 needs port 80 open:** the EC2 security group must allow inbound HTTP, or the public IP won't load.
