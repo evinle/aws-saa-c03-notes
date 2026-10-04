@@ -1,0 +1,15 @@
+- Per instance checks
+- System status vs instance status
+- System status failure
+	- Power, network, host software/hardware
+- Instance status failure
+	- Corrupted FS
+	- Networking
+	- OS Kernel
+- Auto recovery possible
+	- Moves to new host
+- "Create Status check alarm"
+	- can take action on alarm, including "Recover"
+- Can only recover into same AZ 
+- If no spare capacity, might not work
+- Instance store volume only won't work
