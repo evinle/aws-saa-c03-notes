@@ -13,3 +13,8 @@
 - Can only recover into same AZ 
 - If no spare capacity, might not work
 - Instance store volume only won't work
+
+# Shutdown, Terminate & Termination Protection
+- Can be enabled on an instance's settings in console
+- `disableApiTermination` instance attribute
+- Change shutdown behaviour - Stop or Terminate

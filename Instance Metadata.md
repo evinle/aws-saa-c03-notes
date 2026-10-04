@@ -1,0 +1,12 @@
+- Way for EC2 instance to access data about its environment
+- Accessible inside ALL instances
+- http://169.254.169.254/latest/meta-data
+- Environment 
+	- Hostname
+- Networking
+- Authentication - temporary role credentials
+- User-Data
+- No Authentication nor encrypted
+- Local firewall rule possible - per instance admin overhead
+
+- Use ec2-metadata cli tool for easier querying
