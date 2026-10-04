@@ -12,7 +12,10 @@
 		- DNS - ec2-3-89-7-136.compute-1.amazonaws.com
 			- Resolves to private IP
 	- 1 elastic IP per private IPv4 address
-		- Elastic IP
+		- Elastic IP - allocated to AWS account
+		- Can associate with private IP on primary or secondary interface
+		- Remove the Public IPv4, replaces with the Elastic IP
+			- Old public IP lost, can't get back even after removing Elastic IP
 	- 0 or more IPv6 addresses
 	- Security Groups
 		- Applied to ENI, affects all IPs on the interface
@@ -20,3 +23,10 @@
 		- If source/destination is not one of the IPs on the interface
 	- Secondary interfaces can be detached
 
+# Exam Powerup
+- Secondary ENI + MAC = Licensing
+- Multi-homed systems (subnets) Management & Data
+- Different SGs - multiple interfaces
+- OS - DOESN'T see public IPv4
+- IPv4 public IPs are dynamic (stop & start = change)
+- Public DNS = private IP in VPC, public IP everywhere else
