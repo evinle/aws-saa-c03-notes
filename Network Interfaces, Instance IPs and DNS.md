@@ -1,0 +1,22 @@
+- Instance starts with ENI - primary ENI
+	- Can attach one or more secondary ENIs
+	- Can be in different subnet, but same AZ
+- ENI has
+	- Mac Address
+	- Primary IPv4 Private IP
+		- Picking VPC and subnet for instance = picking for ENI
+		- DNS - ip-10-10-0-10.ec2.internal
+	- 0 or more secondary IPs
+	- 0 or 1 Public IPv4 
+		- Dynamic - Changes with host changes 
+		- DNS - ec2-3-89-7-136.compute-1.amazonaws.com
+			- Resolves to private IP
+	- 1 elastic IP per private IPv4 address
+		- Elastic IP
+	- 0 or more IPv6 addresses
+	- Security Groups
+		- Applied to ENI, affects all IPs on the interface
+	- Source/Destination Check
+		- If source/destination is not one of the IPs on the interface
+	- Secondary interfaces can be detached
+
