@@ -1,0 +1,7 @@
+- AWS::CloudFormation::Init
+- Complex bootstrapping 
+- cfn-init helper script - installed on EC2 OS
+- Simple configuration management system
+- Procedural (User Data) vs Desired State (cfn-init)
+- Packages, Groups, Users, Sources, Files, Commands and Services
+- Provided with directives via Metadata and AWS::CloudFormation::Init on a CFN resource
