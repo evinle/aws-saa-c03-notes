@@ -1,2 +1,51 @@
 - Highly available cluster of compute resources
+- Work as 1 unit
+- Control plane
+	- Manges cluster, scheduling, app management, scaling and deploying
+- Cluster nodes
+	- VM or Physical Server
+	- Functions as workers
+	- Run your applications
+- Software on nodes
+	- containerd or Docker
+	- kubelet - agent to interact with control plane
+	- Kubernetes API used for communication between control plane and kubelet agent
 - ![[Pasted image 20261004221814.png]]
+
+
+- Pods - smallest unit of computing in K8
+- One-container-one-pod is very common
+	- Pods handle containers within them, think in pods
+	- Only run multiple containers if they're tightly coupled
+	- Pods are non-permanent
+- Control plane
+	- kube-apiserver
+		- front end for control plane
+	- horizontally scaled for HA
+	- etcd 
+		- HA KV store
+	- kube-scheduler
+		- pods with no assigned nodes, assign a node
+	- cloud-controller-manager (optional)
+		- allows k8s to interact with cloud specific APIs
+	- kube-controller-manager, collection of processes
+		- Node controller - monitoring and responding to node outages
+		- Job controller - one-off tasks (jobs) => PODS
+		- Endpoint Controller - populates endpoints in the clusters - links services to pods
+		- Service Account & Token Controllers - accounts/api tokens
+- kube-proxy 
+	- Runs on every node
+	- Coordinates networking with control plane
+	- Communication with pods in our outside of cluster
+	![[Pasted image 20261015220708.png]]
+
+- Cluster - deployment of kubernetes
+- Node - resources; pods are placed on nodes to run
+- Pod - 1+ containers, smallest unit in kubernetes, often one-container-one-pod
+- Service - abstraction from pods, service/application on 1 or more pods
+- Job - ad-hoc, creates one or more pods until completion
+- Ingress - Exposes a way into a service for something external to the cluster
+	- Ingress => Routing => Service => 1 + Pods
+- Ingress Controller - used to provide ingress
+	- AWS LB Controller uses ALB/NLB allows ingress
+- Persistent Storage (PV) - volume whose lifecycle lives beyond any 1 pod using it

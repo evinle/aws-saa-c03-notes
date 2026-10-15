@@ -1,0 +1,11 @@
+- Bootstrapping allows EC2 Build Automation
+	- Bring instance to configured state
+- User Data - Accessed via the meta-data IP
+- http://169.254.169.254/latest/user-data
+- Anything you pass in, instance OS executes
+	- ONlLY once, at launch time
+	- Restarts don't count
+- EC2 doesn't interpret, the OS needs to understand the user data
+
+- Software in OS that listens for user-data and spawns a root process to execute if any is injected from the EC2 service
+- 
