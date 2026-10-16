@@ -1,0 +1,12 @@
+- Storage for configuration & secrets
+- String, StringList & SecureString
+- License codes, Database Strings, Full Configs & Passwords
+- Hierarchies & Versioning
+- Plaintext and Ciphertext
+- Public Parameters - avail and created by AWS
+
+- Public Service
+- hierarchical
+- Changes can create events
+- ![[Pasted image 20261016234035.png]]
+- 

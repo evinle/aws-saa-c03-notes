@@ -1,0 +1,15 @@
+- IAM Role + Permission Policy
+- Apps inside instance can use permissions from the role
+- InstanceProfile, wrapper around IAM Role
+	- Allows permissions to get inside the instance
+- InstanceProfile auto created from console
+	- cli or cfn, need to create separately
+- InstanceProfile attached to EC2 instance
+- Temp Credentials delivered via instance meta-data
+	- Credentials automatically renewed
+- ![[Pasted image 20261016231604.png]]
+- iam/security-credentials/role-name
+- Automatically rotated - always valid
+- Always use roles where possible
+- CLI tools will use Role credentials automatically
+
