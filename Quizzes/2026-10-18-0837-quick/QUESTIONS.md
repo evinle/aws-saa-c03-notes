@@ -30,7 +30,7 @@ Which solution meets these requirements?
 
 - [ ] A. In every member account, attach an IAM policy that denies cloudtrail:StopLogging and cloudtrail:DeleteTrail to all IAM users and roles.
 - [ ] B. Create an SCP that explicitly denies cloudtrail:StopLogging and cloudtrail:DeleteTrail, and attach it to the organization root.
-- [ ] C. Replace the FullAWSAccess SCP on the organization root with an allow-list SCP that permits only CloudTrail read actions.
+- [x] C. Replace the FullAWSAccess SCP on the organization root with an allow-list SCP that permits only CloudTrail read actions.
 - [ ] D. Create an AWS Config rule that detects stopped trails and runs automatic remediation to restart logging.
 
 ## Q03
