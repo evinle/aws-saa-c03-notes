@@ -31,9 +31,9 @@ If the user's wording doesn't match an argument ("give me 15 S3 questions"), map
 ## Run it in chat
 
 - Show one question at a time, exactly as written in `QUESTIONS.md` (header `Q01/10`). Accept answers like `B`, `b`, `A,D` or `a d`.
-- After each answer, tick the boxes in `QUESTIONS.md` (`- [x]`). Don't commit after each question.
+- **Don't write any files during a chat quiz.** Keep the answers in the conversation. Write all the ticks to `QUESTIONS.md` (`- [x]`) in one go at the end, just before grading, or earlier only if the user asks. Why: the repo's stop hook flags uncommitted changes after every reply, so editing files mid-quiz would force a commit and push after each answer.
 - **Quick and Drill**: reply with ✅ or ❌, the correct letter(s) and **one line** on why. Give the full explanation from `ANSWERS.md` (why each wrong option fails, the deciding keyword, the note link) only if the user replies `why`. Then show the next question.
-- **Mock**: no feedback until the end. Record `started` in the frontmatter at the first question and `finished` at the last (use `date`). Mention the time remaining every 10 questions, counting down from 130 minutes.
+- **Mock**: no feedback until the end. Note the `started` time at the first question and the `finished` time at the last (use `date`), and write both to the frontmatter at the end. Mention the time remaining every 10 questions, counting down from 130 minutes.
 - Never reveal or hint at the key before the user answers. If the user says `skip`, leave the question unticked (it counts as wrong). If they say `stop`, grade what's been answered and count the rest as unanswered.
 
 ## Grade

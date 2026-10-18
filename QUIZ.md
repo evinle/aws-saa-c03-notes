@@ -75,7 +75,7 @@ Quizzes/
 - Markdown filenames are UPPERCASE.
 - `PROGRESS.md`, `MISSED.md` and `NOTE-ISSUES.md` only summarise and link. Question text and explanations live only in run folders.
 - **The answer key is written when the quiz is created**, so any later agent can grade from the files alone without knowing how the quiz was made.
-- **Mode**: `chat` (default) or `file`. Both modes produce the same files. In chat mode the agent ticks the boxes in `QUESTIONS.md` for you as you answer. In file mode you tick them in Obsidian, then ask for grading (`/quiz grade <folder>`).
+- **Mode**: `chat` (default) or `file`. Both modes produce the same files. In chat mode the agent keeps your answers in the conversation and writes all the ticks to `QUESTIONS.md` at the end, just before grading (or earlier if you ask). It writes nothing mid-quiz, because the repo's stop hook flags uncommitted changes after every reply and would otherwise force a commit and push after each answer. In file mode you tick them in Obsidian, then ask for grading (`/quiz grade <folder>`).
 
 ### `QUESTIONS.md` template
 
