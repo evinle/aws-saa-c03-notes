@@ -19,7 +19,7 @@ Which solution meets these requirements with the LEAST operational overhead?
 
 - [ ] A. Use server-side encryption with Amazon S3 managed keys (SSE-S3) as the bucket's default encryption.
 - [ ] B. Use server-side encryption with customer-provided keys (SSE-C), with keys generated and rotated by the security team.
-- [ ] C. Use SSE-KMS with a customer managed key whose key policy grants kms:Decrypt only to the application role, with automatic rotation enabled.
+- [x] C. Use SSE-KMS with a customer managed key whose key policy grants kms:Decrypt only to the application role, with automatic rotation enabled.
 - [ ] D. Encrypt objects on the client side before upload, using keys that the security team stores in AWS Secrets Manager.
 
 ## Q02
