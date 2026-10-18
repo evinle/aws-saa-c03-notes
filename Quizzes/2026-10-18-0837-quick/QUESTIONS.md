@@ -40,9 +40,9 @@ A three-tier application runs web servers in public subnets and database servers
 Which combination of actions meets these requirements? (Select TWO.)
 
 - [ ] A. Add an inbound deny rule for 203.0.113.0/24 to the web tier's security group.
-- [ ] B. Add an inbound deny rule for 203.0.113.0/24 with rule number 50 to the public subnets' network ACL.
+- [x] B. Add an inbound deny rule for 203.0.113.0/24 with rule number 50 to the public subnets' network ACL.
 - [ ] C. Add an inbound deny rule for 203.0.113.0/24 with rule number 200 to the public subnets' network ACL.
-- [ ] D. Change the database security group to allow the database port from the web tier's security group.
+- [x] D. Change the database security group to allow the database port from the web tier's security group.
 - [ ] E. Change the database security group to allow the database port from the web instances' current private IP addresses.
 
 ## Q04
@@ -53,7 +53,7 @@ Which solution meets these requirements with the LEAST operational overhead?
 
 - [ ] A. Create an Amazon CloudWatch alarm on the StatusCheckFailed_System metric with an EC2 recover action.
 - [ ] B. Create an Amazon CloudWatch alarm on the StatusCheckFailed_Instance metric with an EC2 recover action.
-- [ ] C. Place the instance in an Auto Scaling group with a minimum, maximum, and desired capacity of 1.
+- [x] C. Place the instance in an Auto Scaling group with a minimum, maximum, and desired capacity of 1.
 - [ ] D. Enable termination protection and set the instance's shutdown behavior to Stop.
 
 ## Q05
@@ -64,7 +64,7 @@ Which solution meets this requirement with the LEAST operational overhead?
 
 - [ ] A. Enable S3 Replication Time Control (RTC) on the replication rule.
 - [ ] B. Delete and recreate the replication rule so that it re-evaluates every object in the source bucket.
-- [ ] C. Use S3 Batch Replication to replicate the existing objects to the destination bucket.
+- [x] C. Use S3 Batch Replication to replicate the existing objects to the destination bucket.
 - [ ] D. Add a lifecycle rule to the source bucket that transitions the existing objects so that they generate replication events.
 
 ## Q06
@@ -76,7 +76,7 @@ What should the solutions architect do to fix the replication?
 - [ ] A. Add s3:* on the destination bucket to the replication role's permissions policy.
 - [ ] B. Change the replication rule to transfer object ownership to the backup account.
 - [ ] C. Create an IAM user in the backup account and add its access keys to the replication configuration.
-- [ ] D. Add a bucket policy to the destination bucket that allows the replication role to replicate objects into it.
+- [x] D. Add a bucket policy to the destination bucket that allows the replication role to replicate objects into it.
 
 ## Q07
 
@@ -85,7 +85,7 @@ A company runs a self-managed NoSQL database cluster on Amazon EC2. The database
 Which storage option meets these requirements?
 
 - [ ] A. Storage optimized instances that keep the database files on their NVMe instance store volumes.
-- [ ] B. A single io2 Block Express EBS volume on each node, provisioned with the maximum IOPS.
+- [x] B. A single io2 Block Express EBS volume on each node, provisioned with the maximum IOPS.
 - [ ] C. Several gp3 EBS volumes on each node, combined in a RAID 0 array.
 - [ ] D. An Amazon EFS file system in Max I/O performance mode, shared by all nodes.
 
@@ -95,9 +95,9 @@ A media company's users in Australia and Europe upload 2–4 GB video files dire
 
 Which combination of changes will improve upload speed and reliability? (Select TWO.)
 
-- [ ] A. Enable S3 Transfer Acceleration on the bucket and upload through the accelerate endpoint.
+- [x] A. Enable S3 Transfer Acceleration on the bucket and upload through the accelerate endpoint.
 - [ ] B. Generate S3 presigned URLs for the uploads.
-- [ ] C. Upload the files using multipart upload.
+- [x] C. Upload the files using multipart upload.
 - [ ] D. Add random hash prefixes to the object keys.
 - [ ] E. Upload the files into the S3 One Zone-IA storage class.
 
@@ -108,7 +108,7 @@ A company stores application logs in Amazon S3 as compressed daily archives of a
 Which lifecycle configuration is the MOST cost-effective?
 
 - [ ] A. Transition objects to S3 Standard-IA after 30 days and expire them after 365 days.
-- [ ] B. Transition objects to S3 Glacier Flexible Retrieval after 30 days and expire them after 365 days.
+- [x] B. Transition objects to S3 Glacier Flexible Retrieval after 30 days and expire them after 365 days.
 - [ ] C. Transition objects to S3 Glacier Deep Archive after 30 days and expire them after 365 days.
 - [ ] D. Store objects in S3 Intelligent-Tiering and expire them after 365 days.
 
@@ -121,4 +121,4 @@ Which purchasing option provides the largest discount that continues to apply th
 - [ ] A. Purchase 3-year Standard Reserved Instances for the current instance types.
 - [ ] B. Run the baseline on Spot Instances.
 - [ ] C. Purchase a 3-year EC2 Instance Savings Plan.
-- [ ] D. Purchase a 3-year Compute Savings Plan.
+- [x] D. Purchase a 3-year Compute Savings Plan.
