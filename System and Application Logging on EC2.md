@@ -1,0 +1,6 @@
+- CloudWatch is for metrics
+- CloudWatch Logs is for logging
+- Neither can natively capture data inside an instance
+- CloudWatch Agent + config + permissions required
+- ![[Pasted image 20261017000619.png]]
+- 
