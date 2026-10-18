@@ -39,7 +39,7 @@
 	- Customer Managed - more configurable, i.e. cross account access
 - Support rotation
 	- AWS Managed - can't be disabled, set to rotate once per year
-	- Customer Managed - optional, enabled by default, once per year
+	- Customer Managed - optional, disabled by default (must be enabled), once per year
 - Backing Key (and previous backing keys)
 	- Old versions can still be decrypted after rotation
 - Aliases - per region

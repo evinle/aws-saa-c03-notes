@@ -36,7 +36,7 @@
 ## Partial Upfront
 - Reduced per/s fee
 - Cheaper
-## No Upfront
+## All Upfront
 - No per/s fee
 - Cheapest
 

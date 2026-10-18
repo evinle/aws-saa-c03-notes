@@ -1,4 +1,5 @@
 # Scheduled Reserved Instances
+- No longer offered by AWS - no new purchases (avoid as an exam answer); use On-Demand Capacity Reservations or Savings Plans instead
 - Long term usage that doesn't run constantly
 	- e.g Batch Processing daily for 5 hours starting at 23:00
 	- Weekly data, sales analysis, every Friday for 24 Hours
